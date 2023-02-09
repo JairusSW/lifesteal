@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DAD",
+        "THT",
+        "DSD"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        },
+        "T": {
+            "item": "minecraft:totem_of_undying"
+        },
+        "H": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "S": {
+            "item": "minecraft:amethyst_shard"
+        }
+    },
+    "result": {
+        "item": "minecraft:knowledge_book"
+    }
+}
