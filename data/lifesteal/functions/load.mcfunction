@@ -1,26 +1,11 @@
-scoreboard objectives add ls_health dummy
-scoreboard objectives add ls_lastHealth dummy
+title @a times 20 100 0
+title @a title {"text":"LifeSteal Datapack:", "color": "red"}
+title @a subtitle {"text":"Loaded Successfully","color":"dark_green"}
 
-scoreboard objectives add ls_firstJoin dummy
-scoreboard objectives add ls_leave minecraft.custom:minecraft.leave_game
+# Detect deaths of player
+scoreboard objectives add lifesteal-deaths deathCount
+# Detect the kills of player
+scoreboard objectives add lifesteal-kills playerKillCount
 
-scoreboard objectives add ls_killedPlayer playerKillCount
-scoreboard objectives add ls_death deathCount
-
-scoreboard objectives add ls_completedKills dummy
-
-#scoreboard objectives add ls_saved_selected_heart_item dummy
-
-scoreboard objectives add last_tick_heart_check dummy
-
-#scoreboard objectives add extract-heart trigger
-scoreboard objectives add extract-heart trigger
-
-scoreboard objectives add ls_tick dummy
-scoreboard objectives add ls_ban_tick dummy
-scoreboard objectives add ls_banned dummy
-
-scoreboard objectives add ls_global_settings dummy
-
-
-forceload add 0 0
+# Keep track of player health
+scoreboard objectives add lifesteal-health dummy
