@@ -1,5 +1,4 @@
 # Update user health with min 1 and max 20
-execute if score @s lifesteal-health matches 0 run attribute @s generic.max_health base set 2
 execute if score @s lifesteal-health matches 1 run attribute @s generic.max_health base set 2
 execute if score @s lifesteal-health matches 2 run attribute @s generic.max_health base set 4
 execute if score @s lifesteal-health matches 3 run attribute @s generic.max_health base set 6
@@ -22,6 +21,11 @@ execute if score @s lifesteal-health matches 19 run attribute @s generic.max_hea
 execute if score @s lifesteal-health matches 20.. run attribute @s generic.max_health base set 40
 execute if score @s lifesteal-health matches 20.. run scoreboard players set @s lifesteal-health 40
 
+execute if score @s lifesteal-health matches 0 run scoreboard players set @s lifesteal-health 10
+
 # Updates the health
-execute unless score @s lifesteal-health = @s ls_lastHealth run effect give @s poison 1 1 true
-execute unless score @s lifesteal-health = @s ls_lastHealth run effect give @s regeneration 1 2 true
+effect give @s poison 1 1 true
+effect give @s regeneration 1 2 true
+
+# Reset tag
+execute as @e[tag=is-dead,limit=1] run tag @s remove is-dead
